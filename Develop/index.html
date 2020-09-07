@@ -28,7 +28,7 @@
         <p id="currentDay" class="lead"></p>
     </header>
 
-    <!--mess of containers for each time in sheet.-->
+    <!--mess of containers for each time in sheet. maybe i should have done this as a list-->
     <div class="container">
         <div class="row">
             <div class="col border border-dark border-left-0 text-center font-weight-bold">9am</div>
@@ -189,10 +189,8 @@
 
       //this function is trying to set the text in the input boxes to local storage on load, couldnt get it to work though
       function onload(){
-        var storedValue9= localStorage.getItem('nineInput');
-        console.log(storedValue9);
-        //cant figure this out, not going to duplicate for all the times
-        $('nineInput').val=storedValue9;
+        //cant figure this out, not going to duplicate for all the times. left what i had tried
+       // $('test').text(document.localStorage.getItem('nineInput'))
       }
       onload();
       
@@ -203,11 +201,11 @@
       
 
       //times to use for check function
-      var compTime = moment().format('LT')
-      var startTime= moment('10:00am');
+      var compTime = moment().format('LT');
+      var startTime = moment('10:00am');
       //9am check, will continue for each hour (this feels redundant and i could probably pull off a for loop but i cant think of how)
       function timeChecks(){
-        if(compTime.text() > startTime.text()){
+        if(compTime > startTime){
           $('nineInput').css("backgroundcolor", "blue")
         }else{
           $('nineInput').css("backgroundcolor", "blue")
