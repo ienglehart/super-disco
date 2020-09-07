@@ -46,8 +46,50 @@
     <div class="container">
       <div class="row">
         <div class="col border border-dark border-left-0 text-center font-weight-bold">11am</div>
-        <input type = "text" id="elevenInput" class="col-10 border-right border-white bg-light"></input>
-        <button type="button" id="eleven-button" class="col btn-info rounded-right border-0">💾</button>
+        <input type = "text" id="elInput" class="col-10 border-right border-white bg-light"></input>
+        <button type="button" id="el-button" class="col btn-info rounded-right border-0">💾</button>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col border border-dark border-left-0 text-center font-weight-bold">12pm</div>
+        <input type = "text" id="twInput" class="col-10 border-right border-white bg-light"></input>
+        <button type="button" id="tw-button" class="col btn-info rounded-right border-0">💾</button>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col border border-dark border-left-0 text-center font-weight-bold">1pm</div>
+        <input type = "text" id="oneInput" class="col-10 border-right border-white bg-light"></input>
+        <button type="button" id="one-button" class="col btn-info rounded-right border-0">💾</button>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col border border-dark border-left-0 text-center font-weight-bold">2pm</div>
+        <input type = "text" id="twoInput" class="col-10 border-right border-white bg-light"></input>
+        <button type="button" id="two-button" class="col btn-info rounded-right border-0">💾</button>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col border border-dark border-left-0 text-center font-weight-bold">3pm</div>
+        <input type = "text" id="threeInput" class="col-10 border-right border-white bg-light"></input>
+        <button type="button" id="three-button" class="col btn-info rounded-right border-0">💾</button>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col border border-dark border-left-0 text-center font-weight-bold">4pm</div>
+        <input type = "text" id="fourInput" class="col-10 border-right border-white bg-light"></input>
+        <button type="button" id="four-button" class="col btn-info rounded-right border-0">💾</button>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col border border-dark border-left-0 text-center font-weight-bold">5pm</div>
+        <input type = "text" id="fiveInput" class="col-10 border-right border-white bg-light"></input>
+        <button type="button" id="five-button" class="col btn-info rounded-right border-0">💾</button>
       </div>
     </div>
    
@@ -65,42 +107,110 @@
       //save 9am input to localstorage
       $('#nine-button').on('click', function(){
           $('#nineInput').each(function(){    
-              var id = $(this).attr('id');
-              var value = $(this).val();
-              localStorage.setItem(id, value);
-              console.log(value);
+              var id9 = $(this).attr('id');
+              var value9 = $(this).val();
+              localStorage.setItem(id9, value9);
+              console.log(value9);
           });   
       });
+      //save 10am input to localstorage
+      $('#ten-button').on('click', function(){
+          $('#tenInput').each(function(){    
+              var id10 = $(this).attr('id');
+              var value10 = $(this).val();
+              localStorage.setItem(id10, value10);
+              console.log(value10);
+          });   
+      });
+      //save 11am input to localstorage
+      $('#el-button').on('click', function(){
+          $('#elInput').each(function(){    
+              var id11 = $(this).attr('id');
+              var value11 = $(this).val();
+              localStorage.setItem(id11, value11);
+              console.log(value11);
+          });   
+      });
+      //save 12pm input to localstorage
+      $('#tw-button').on('click', function(){
+          $('#twInput').each(function(){    
+              var id12 = $(this).attr('id');
+              var value12 = $(this).val();
+              localStorage.setItem(id12, value12);
+              console.log(value12);
+          });   
+      });
+      //save 1pm input to localstorage
+      $('#one-button').on('click', function(){
+          $('#oneInput').each(function(){    
+              var id1 = $(this).attr('id');
+              var value1 = $(this).val();
+              localStorage.setItem(id1, value1);
+              console.log(value1);
+          });   
+      });
+      //save 2pm input to localstorage
+      $('#two-button').on('click', function(){
+          $('#twoInput').each(function(){    
+              var id2 = $(this).attr('id');
+              var value2 = $(this).val();
+              localStorage.setItem(id2, value2);
+              console.log(value2);
+          });   
+      });
+      //save 3pm input to localstorage
+      $('#three-button').on('click', function(){
+          $('#threeInput').each(function(){    
+              var id3 = $(this).attr('id');
+              var value3 = $(this).val();
+              localStorage.setItem(id3, value3);
+              console.log(value3);
+          });   
+      });
+      //save 1pm input to localstorage
+      $('#four-button').on('click', function(){
+          $('#fourInput').each(function(){    
+              var id4 = $(this).attr('id');
+              var value4 = $(this).val();
+              localStorage.setItem(id4, value4);
+              console.log(value4);
+          });   
+      });
+      //save 1pm input to localstorage
+      $('#five-button').on('click', function(){
+          $('#fiveInput').each(function(){    
+              var id5 = $(this).attr('id');
+              var value5 = $(this).val();
+              localStorage.setItem(id5, value5);
+              console.log(value5);
+          });   
+      });
+
 
       //this function is trying to set the text in the input boxes to local storage on load, couldnt get it to work though
       function onload(){
         var storedValue9= localStorage.getItem('nineInput');
         console.log(storedValue9);
-        document.getElementById("nineInput").innerHTML=storedValue9;
-
-        var storedValue9= localStorage.getItem('tenInput');
-        console.log(storedValue9);
-        document.getElementById("tenInput").innerHTML=storedValue9;
-
-        var storedValue9= localStorage.getItem('elevenInput');
-        console.log(storedValue9);
-        document.getElementById("elevenInput").innerHTML=storedValue9;
+        //cant figure this out, not going to duplicate for all the times
+        $('nineInput').val=storedValue9;
       }
       onload();
       
+      //Time at top
       var currentTime = moment().format("MMM Do YY");
       console.log(currentTime);
-      $('#currentDay') = currentTime;
+      document.getElementById("currentDay").innerText = currentTime;
       
+
+      //times to use for check function
       var compTime = moment().format('LT')
       var startTime= moment('10:00am');
-
       //9am check, will continue for each hour (this feels redundant and i could probably pull off a for loop but i cant think of how)
       function timeChecks(){
-        if(compTime > startTime){
-          //somehow color the 9am tile grey for past
+        if(compTime.text() > startTime.text()){
+          $('nineInput').css("backgroundcolor", "blue")
         }else{
-          //color 9am tile green for present
+          $('nineInput').css("backgroundcolor", "blue")
         }
         var oneHour = startTime.add(1, 'hour')
         if(compTime < startTime){
